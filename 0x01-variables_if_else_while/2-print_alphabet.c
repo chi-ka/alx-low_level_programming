@@ -16,8 +16,8 @@ int main(void)
 	{
 		a = alphabets[i];
 		putchar(a);
-		putchar('\n');
 	}
+	putchar('\n');
 
 	return(0);
 
