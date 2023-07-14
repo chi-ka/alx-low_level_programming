@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - Entry point
@@ -11,7 +12,7 @@ int main(void)
 {
 	const char* out = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	write(2, out, sizeof(out) - 1);
+	fwrite(out, sizeof(char), strlen(out), stderr);
 
 	return (1);
 }
