@@ -1,17 +1,17 @@
 #include <stdio.h>
 
-/** Main- Entry point
+/**
+ * main - Entry point
  *
- *
- * Return: Always 0 (Success);*/
-
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int i = 0;
-	
-	while(i < 16)	
+
+	while (i < 16)
 	{
-		if(i < 10)
+		if (i < 10)
 		{
 			putchar(i + '0');
 			i++;
@@ -24,5 +24,5 @@ int main(void)
 	}
 	putchar('\n');
 
-	return(0);
+	return (0);
 }
