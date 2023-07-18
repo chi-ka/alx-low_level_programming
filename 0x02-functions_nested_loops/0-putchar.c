@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-
-/**Main - Entry point
+/**
+ * main - Entry point
  *
- *Ends with Return(0)*/
-
+ * Return: Always 0
+ */
 int main(void)
 {
 	size_t i;
-	char putchararray[] = {'_','p','u','r','t','c','h','a','r'};
+	char putchararray[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
 
-	for(i = 0; i < (sizeof(putchararray)/ sizeof(putchararray[0])); i++)
+	for (i = 0; i < (sizeof(putchararray) / sizeof(putchararray[0])); i++)
 	{
 		putchar(putchararray[i]);
 	}
 	putchar('\n');
 
-	return(0);
+	return (0);
 }
+
