@@ -9,18 +9,21 @@
 
 void print_fibonacci_numbers(int n) 
 {
+
+    int i;
     int fib_numbers[98];
     fib_numbers[0] = 1;
     fib_numbers[1] = 2;
 
-    for (int i = 2; i < n; i++) 
+    for (i = 2; i < n; i++) 
     {
         fib_numbers[i] = fib_numbers[i - 1] + fib_numbers[i - 2];
     }
 
-    for (int i = 0; i < n; i++) 
+    for (i = 0; i < n; i++)
+    int num; 
     {
-        int num = fib_numbers[i];
+        num = fib_numbers[i];
         while (num > 0) 
         {
             putchar('0' + (num % 10));
