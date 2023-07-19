@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
- * _isalpha - Checks if it is a letter
+ * _isalpha - Checks if a character is a letter
  *
- *Check @c is a letter
+ * @c: The character to be checked
  *
- *Return: 1  if @c is a letter, lowercase or uppercase, 0 otherwise
+ * Return: 1 if @c is a letter (lowercase or uppercase), 0 otherwise
  */
 
 int _isalpha(int c)
