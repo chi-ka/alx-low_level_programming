@@ -6,7 +6,7 @@
  *
  * Prototype: int print_sign(int n);
  *
- * Character @n is the value to determine the sign of
+ * @n: is the value to determine the sign of
  *
  * Return: -1 and prints - if n is less than zero, and
  * prints + if n is greater than zero and and prints 0 if n is zero
