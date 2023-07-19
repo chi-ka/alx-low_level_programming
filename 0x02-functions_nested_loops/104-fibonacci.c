@@ -21,8 +21,8 @@ void print_fibonacci_numbers(int n)
     }
 
     for (i = 0; i < n; i++)
-    int num; 
     {
+	int num;
         num = fib_numbers[i];
         while (num > 0) 
         {
