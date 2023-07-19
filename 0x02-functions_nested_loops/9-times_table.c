@@ -19,16 +19,16 @@ void times_table(void)
 
 			c = a * b;
 			if (b < 9)
-			{	
+			{
 				if ((c ==  0) && (b == 0))
 				{
-					_putchar((c % 10) + '0' );
+					_putchar((c % 10) + '0');
 				}
 				else if (c < 10)
-                                {
-                                        _putchar(' ');
-                                        _putchar((c % 10) + '0' );
-                                }
+				{
+					_putchar(' ');
+					_putchar((c % 10) + '0' );
+				}
 				else
 				{
 					_putchar((c / 10) + '0');
