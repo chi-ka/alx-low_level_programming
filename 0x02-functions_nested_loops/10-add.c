@@ -1,23 +1,16 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * add - This adds two integers
+ * add - Adds two integers.
  *
- * @a: first integer
+ * @a: The first integer.
+ * @b: The second integer.
  *
- * @b: second integer
- *
- * Return: returns the sum od @a and @b
+ * Return: The sum of the two integers.
  */
 
 int add(int a, int b)
 {
-	int c;
-
-	c = a + b;
-	_putchar((c / 10));
-	_putchar((c % 10));
-
-	return (c);
+   return a + b;
 }
+
