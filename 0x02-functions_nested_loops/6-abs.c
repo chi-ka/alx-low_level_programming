@@ -3,7 +3,7 @@
 
 /**
  * _abs - Write a function that computes the absolute value of an integer.
- * 
+ *
  * Prototype: int _abs(int);
  *
  * @i: the character which we are to get the absolute value of
@@ -13,17 +13,17 @@
 
 int _abs(int i)
 {
-	if(i > 0)
+	if (i > 0)
 	{
-		return(i);
+		return (i);
 	}
 	else if (i < 0)
 	{
 		i = i * -1;
-		return(i);
+		return (i);
 	}
 	else
 	{
-		return(0);
+		return (0);
 	}
 }
