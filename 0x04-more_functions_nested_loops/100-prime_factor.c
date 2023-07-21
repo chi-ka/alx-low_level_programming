@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * @n: the number to find the largest prime factor of
+ * @n: the number input
  *
  * Return: the largest prime factor
  */
@@ -33,7 +33,7 @@ int main(void)
 	{
 		largest = n;
 	}
-	printf("%ld\n",largest);
+	printf("%ld\n", largest);
 
 	return (0);
 }
