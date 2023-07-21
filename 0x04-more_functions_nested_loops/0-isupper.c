@@ -2,14 +2,14 @@
 #include "main.h"
 
 /**
- * main - for uppercase character.
+ *  _isupper - for uppercase character.
  *
  * @c: the alphabet to check
- * 
+ *
  * Return: 1 if uppercase and 0 otherwise.
  */
 
-int _isupper (int c)
+int _isupper(int c)
 {
 	if ((c >= 'A') && (c <= 'Z'))
 	{
