@@ -1,20 +1,14 @@
-#include <stdio.h>
-#include "main.h"
-
-/**
- * print_numbers - Print the numbers since 0 up to 9
- * Return: The numbers since 0 up to 9
- */
-
-void print_numbers(void)
-
+void print_number(int n)
 {
-
-	int x;
-
-	for (x = 0; x <= 9; x++)
+	if (n < 0)
 	{
-		_putchar(x + '0');
+		_putchar('-');
+		n = -n;
 	}
-	_putchar('\n');
-}
+	int divisor = 1;
+	int temp = n;
+	while (temp >= 10)
+	{
+		divisor *= 10;
+		temp /= 10;
+	}
