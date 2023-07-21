@@ -2,7 +2,7 @@
 #include <math.h>
 
 /**
- * main - Entry point
+ *
  *
  * largest_prime_factor - finds the largest prime factor of a number
  *
@@ -38,12 +38,3 @@ long largest_prime_factor(long n)
 	}
 
 	return (largest);
-
-int main(void)
-{
-	long number = 612852475143;
-	long result = largest_prime_factor(number);
-
-	printf("%ld\n", result);
-	return (0);
-}
