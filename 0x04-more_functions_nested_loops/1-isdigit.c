@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * main - Entry point to chec if number is btwn 0-9.
+ *  _isdigit - Entry point to chec if number is btwn 0-9.
  *
  * @c: Parameter to check
- * 
+ *
  * Return: 1 if True  and 0 otherwise.
  */
 
