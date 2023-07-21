@@ -2,14 +2,15 @@
 #include "main.h"
 
 /**
- * Main - Entry Point
- * 
- * fizz_buzz - print fizz buzz
+ * main - Entry Point
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
 	int i;
+
 	for(i = 1; i <= 100; ++i)
 	{
 		if (((i % 3) == 0) && ((i % 5) == 0))
@@ -52,5 +53,5 @@ int main(void)
 		putchar(' ');
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }

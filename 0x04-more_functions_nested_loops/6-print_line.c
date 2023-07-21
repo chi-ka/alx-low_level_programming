@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - Entry point 
+ * print_line - Entry point
  *
  * @n: the number of times to draw the line
  *

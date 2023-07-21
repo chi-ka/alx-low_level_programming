@@ -3,10 +3,10 @@
 
 /**
  * Main - Entry Point
- * 
- * print_square- print square the size of n
- * 
- * @n - size of square line
+ *
+ * print_square - print square the size of n
+ *
+ * @size: size of square line
  */
 
 void print_square(int size)
@@ -16,9 +16,9 @@ void print_square(int size)
 
 	if (size >= 1)
 	{
-		for(i = 0; i < size; ++i)
+		for (i = 0; i < size; ++i)
 		{
-			for(j = 0;  j < size; ++j)
+			for (j = 0;  j < size; ++j)
 			{
 				putchar('#');
 			}
