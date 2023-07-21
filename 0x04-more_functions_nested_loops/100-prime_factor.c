@@ -2,10 +2,6 @@
 #include <math.h>
 
 /**
- *
- *
- * largest_prime_factor - finds the largest prime factor of a number
- *
  * main - Entry point
  *
  * @n: the number to find the largest prime factor of
@@ -13,7 +9,7 @@
  * Return: the largest prime factor
  */
 
-long largest_prime_factor(void)
+int main(void)
 {
 	long n = 612852475143;
 	long largest = -1;
@@ -37,5 +33,7 @@ long largest_prime_factor(void)
 	{
 		largest = n;
 	}
+	printf("%ld\n",largest);
 
-	return (largest);
+	return (0);
+}
