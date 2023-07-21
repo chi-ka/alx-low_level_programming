@@ -13,8 +13,9 @@
  * Return: the largest prime factor
  */
 
-long largest_prime_factor(long n)
+long largest_prime_factor(void)
 {
+	long n = 612852475143;
 	long largest = -1;
 	long i;
 
