@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _puts - prints a string
+ * puts2 - prints a string
  *
  * @str: string provides
  *
@@ -10,10 +10,16 @@
 
 void puts2(char *str)
 {
+	int count = 0;
+
 	while (*str != '\0')
 	{
-		_putchar(*str);
-		str += 2;
+		if (count % 2 == 0)
+		{
+			_putchar(*str);
+		}
+		count += 1;
+		str += 1;
 	}
 	_putchar('\n');
 }
