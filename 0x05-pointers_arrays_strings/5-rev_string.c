@@ -4,14 +4,14 @@
 /**
  * rev_string - reverse a string
  *
- * @s - input string
+ * @s: input string
  */
 
 void rev_string(char *s)
 {
 	char temp;
-
 	char *start = s;
+
 	while (*s != '\0')
 	{
 		s += 1;
@@ -23,6 +23,6 @@ void rev_string(char *s)
 		*start = *s;
 		*s = temp;
 		start++;
-	       	s--;
+		s--;
 	}
 }
