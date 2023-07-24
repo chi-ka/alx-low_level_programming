@@ -4,9 +4,9 @@
 /**
  * _strlen - calculates the lenght of a string
  *
- * @n: string input
+ * @s: string input
  *
- * Returns - the lenght as int
+ * Return: the lenght as int
  */
 
 int _strlen(char *s)
@@ -17,5 +17,5 @@ int _strlen(char *s)
 	{
 		str_len += 1;
 	}
-	return(str_len);
+	return (str_len);
 }
