@@ -19,11 +19,11 @@ void reverse_array(int *a, int n)
 	j = n;
 	for (i = 0; n > 0; n--)
 	{
-		b[i] = *(a + (n-1));
+		b[i] = *(a + (n - 1));
 		i++;
 	}
 	for (i = 0; i < j; i++)
 	{
 		a[i] = b[i];
 	}
-}	
+}
