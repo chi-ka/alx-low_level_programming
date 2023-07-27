@@ -4,12 +4,12 @@
 /**
  * leet - encodes a string
  *
- * @a: imput string
+ * @str: imput string
  *
  * Return: returns a string
  */
 
-char* leet(char *str)
+char *leet(char *str)
 {
 	char leetMap[128] = {0};
 	char *result = str;
@@ -20,7 +20,7 @@ char* leet(char *str)
 	leetMap['t'] = leetMap['T'] = '7';
 	leetMap['l'] = leetMap['L'] = '1';
 
-	while (*str != '\0') 
+	while (*str != '\0')
 	{
 		if (leetMap[(unsigned char)*str])
 		{
