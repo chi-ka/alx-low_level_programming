@@ -6,7 +6,7 @@
  *
  * @a: input string
  *
- * Returns: a string.
+ * Return: a string.
  */
 
 char *string_toupper(char *a)
