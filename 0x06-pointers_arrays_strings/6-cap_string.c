@@ -12,7 +12,7 @@
 char *cap_string(char *a)
 {
 	char *original = a;
-	
+
 	while (*a != '\0')
 	{
 		if (*a == ' ' || *a == '\t' || *a == '\n')
@@ -22,8 +22,8 @@ char *cap_string(char *a)
 				*(a + 1) -= 32;
 			}
 		}
-                a++;
-        }
-        
-	return (original);	
+		a++;
+	}
+
+	return (original);
 }
