@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * strncat - concatenates two strings.
+ * _strncat - concatenates two strings.
  *
  * @dest: beginning string
  *
@@ -28,7 +28,7 @@ char *_strncpy(char *dest, char *src, int n)
 		n--;
 	}
 	while (n > 0)
-	{ 
+	{
 		*d = '\0';
 		d++;
 		n--;
