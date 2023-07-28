@@ -1,3 +1,11 @@
+#include <stdio.h>
+
+/**
+ * main - print 98
+ *
+ * Return: int response
+ */
+
 int main(void)
 {
 	int n;
