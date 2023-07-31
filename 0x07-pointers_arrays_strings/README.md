@@ -1,6 +1,10 @@
-9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
-#advanced
-Create a file that contains the password for the crackme2 executable.
+0. memset - Write a function that fills memory with a constant byte.
+
+Prototype: char *_memset(char *s, char b, unsigned int n);
+The _memset() function fills the first n bytes of the memory area pointed to by s with the constant byte b
+Returns a pointer to the memory area s
+
+9. Create a file that contains the password for the crackme2 executable.
 
 Your file should contain the exact password, no new line, no extra space
 ltrace, ldd, gdb and objdump can help
