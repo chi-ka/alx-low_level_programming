@@ -2,18 +2,28 @@
 #include "main.h"
 #include <stdbool.h>
 
+/**
+ * _strstr - function that locates a substring.
+ *
+ * @haystack: main string
+ *
+ * @needle: string to locate
+ *
+ * Return: returns a char
+ */
+
 char *_strstr(char *haystack, char *needle)
 {
 	if (*needle == '\0')
 	{
-		return haystack;
+		return (haystack);
 	}
 	while (*haystack)
 	{
 		char *h = haystack;
 		char *n = needle;
 		bool found = true;
-		
+
 		while (*n)
 		{
 			if (*h != *n)
@@ -30,7 +40,7 @@ char *_strstr(char *haystack, char *needle)
 		}
 		haystack++;
 	}
-	
+
 	return (NULL);
 }
 
