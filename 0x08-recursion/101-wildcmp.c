@@ -4,9 +4,9 @@
 /**
  * wildcmp_helper - main string
  *
- * @s1 - first string
+ * @s1: first string
  *
- * @s2 - second string
+ * @s2: second string
  *
  * Return: int
  */
@@ -22,7 +22,7 @@ int wildcmp_helper(char *s1, char *s2)
 		while (*(s2 + 1) == '*')
 		{
 			s2++;
-		}	
+		}
 		while (*s1 != '\0')
 		{
 			if (wildcmp_helper(s1, s2 + 1))
@@ -30,7 +30,7 @@ int wildcmp_helper(char *s1, char *s2)
 				return (1);
 			}
 			s1++;
-		}		
+		}
 		return (wildcmp_helper(s1, s2 + 1));
 	}
 
@@ -47,10 +47,12 @@ int wildcmp_helper(char *s1, char *s2)
  *
  * @s1: first string
  *
- * @s2: second string
+ * @s2 : second string
+ *
+ * Return: int output
  */
 
 int wildcmp(char *s1, char *s2)
 {
-	return wildcmp_helper(s1, s2);
+	return (wildcmp_helper(s1, s2));
 }

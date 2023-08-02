@@ -11,7 +11,7 @@
  * Return: an int
  */
 
-int checker(int n,int a)
+int checker(int n, int a)
 {
 	if (a == 1)
 	{
@@ -35,12 +35,12 @@ int checker(int n,int a)
 int is_prime_number(int n)
 {
 	int c;
-	
+
 	if (n <= 1)
 	{
 		return (0);
 	}
-	c = checker(n,9);
+	c = checker(n, 9);
 
 	return (c);
 }

@@ -18,7 +18,6 @@ int is_palindrome_helper(char *s, int start, int end)
 	if (start >= end)
 	{
 		return (1);
-	
 	}
 
 	if (s[start] != s[end])
@@ -30,7 +29,7 @@ int is_palindrome_helper(char *s, int start, int end)
 }
 
 /**
- * is_palindrime - Checks if a word is a palandrome
+ * is_palindrome - Checks if a word is a palandrome
  *
  * @s: string to check the word
  *
@@ -40,13 +39,13 @@ int is_palindrome_helper(char *s, int start, int end)
 int is_palindrome(char *s)
 {
 	int length;
-       
+
 	length = strlen(s);
 
 	if (length <= 1)
 	{
 		return (1);
 	}
-	
+
 	return (is_palindrome_helper(s, 0, length - 1));
 }
