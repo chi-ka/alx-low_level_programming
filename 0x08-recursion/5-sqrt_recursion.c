@@ -20,7 +20,7 @@ int _sqrt_recursion_helper(int n, int start, int end)
 
 	if (start > end)
 	{
-		return (-1);
+		return (end);
 	}
 	mid = start + (end - start) / 2;
 	midSquare = mid * mid;
