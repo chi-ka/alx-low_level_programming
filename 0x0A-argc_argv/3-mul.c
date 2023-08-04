@@ -43,8 +43,8 @@ int main (int argc, char *argv[])
 		_putchar('\n');
 		return (1);
 	}
-	i = atoi(argv[1]);
-	j = atoi(argv[2]);
+	i = _atoi(argv[1]);
+	j = _atoi(argv[2]);
 	if (i < 0)
 	{
 		_putchar('-');
