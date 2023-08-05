@@ -1,80 +1,42 @@
 #include <stdio.h>
 #include "main.h"
-
-#include <stdio.h>
-#include "main.h"
-#include <math.h>
-
-/**
- * _pow - converts string to int
- *
- * @a: int input
- *
- * @b: power input
- *
- * Return: int output
- */
-
-int _pow(double a, double b)
+#include <math.h> 
+#include <stdbool.h>
+#include <limits.h> 
+int _atoi(const char* str)
 {
-	int i;
-	
-	i = a;
-	while (b > 1)
-	{
-		a *= i;
-		b--;
-	}
-	return (a);
-}
+    int result, sign;
 
-/**
- * _atoi - converts string to int
- *
- * @s: input char
- *
- * REturn: an int 
- */
+    if (str == NULL)
+    {
+        return 0;
+    }
+    result = 0;
+    sign = 1;
+    while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\r' || *str == '\f' || *str == '\v')
+    {
+        str++;
+    }
+    if (*str == '-')
+    {
+        sign = -1;
+        str++;
+    }
+    else if (*str == '+')
+    {
+        str++;
+    }
+    while (*str >= '0' && *str <= '9')
+    {
+        if (result > (INT_MAX - (*str - '0')) / 10)
+	{
+            return (sign == -1) ? INT_MIN : INT_MAX;
+        }
+        result = result * 10 + (*str - '0');
+        str++;
+    }
 
-int _atoi(char *s)
-{
-	char *a;
-	char *z;
-	char c = '\0';
-	int place;
-	int count = 0;
-	int number = 0;
-	
-	while (*s != '\0')
-	{
-		if ('0' <= *s && *s <= '9')
-        {
-		count ++;
-		if (count == 1)
-		{
-			a = s;
-			z = s;
-			if (*(s - 1) == '-')
-			{
-				c = '-';
-			}
-		}
-		z++;
-	}
-	s++;
-	}
-	while (a < z)
-	{
-		place = _pow(10,(count-1));
-		number += ((*a - '0') * place);
-		a++;
-		count--;
-	}
-	if (c == '-')
-	{
-		number = -number;
-	}
-	return (number);
+    return (result * sign);
 }
 
 /**
