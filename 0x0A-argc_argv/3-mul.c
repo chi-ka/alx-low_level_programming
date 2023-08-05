@@ -13,9 +13,7 @@
 
 int main (int argc, char *argv[])
 {
-	int i;
-	int j;
-	int mul;
+	int i, j, mul;
 	char *a = "Error";
 
 	if (argc != 3)
