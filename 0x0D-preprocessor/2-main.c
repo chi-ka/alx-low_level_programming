@@ -1,26 +1,14 @@
-#include <unistd.h>
+#include <stdio.h>
 
 /**
- * main - Writes a character to stdout
+ * main - Entry point
  *
- * Return: On success 1, on error -1 and errno is set appropriately.
+ * Return: Always 0 (Success)
  */
-int _putchar(char c)
-{
-    return write(1, &c, 1);
-}
 
 int main(void)
 {
-	char filename[] = __FILE__;
-	int i = 0;
-
-	while (filename[i] != '\0')
-	{
-		write(1,&(filename[i]),1);
-		i++;
-	}
-	write(1, &('\n'), 1);
-
+	printf("%s\n", __FILE__);
 	return (0);
 }
+
