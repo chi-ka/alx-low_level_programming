@@ -12,11 +12,12 @@
 int _str_len(char *str)
 {
 	int length = 0;
+
 	while (str[length] != '\0')
 	{
 		length++;
 	}
-	
+
 	return (length);
 }
 
@@ -62,7 +63,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		new_dog->owner[i] = owner[i];
 	}
 	new_dog->age = age;
-	
+
 	return (new_dog);
 }
 
