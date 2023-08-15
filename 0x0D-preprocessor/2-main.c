@@ -2,21 +2,9 @@
 #include <stdio.h>
 
 /**
- * _putchar - Writes a character to stdout
- * @c: The character to print
+ * main - Writes a character to stdout
  *
  * Return: On success 1, on error -1 and errno is set appropriately.
- */
-
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
  */
 
 int main(void)
