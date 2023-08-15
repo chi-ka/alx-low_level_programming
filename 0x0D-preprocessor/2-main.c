@@ -9,6 +9,7 @@
 
 int main(void)
 {
+	int _putchar(char c);
 	char filename[] = __FILE__;
 	int i = 0;
 
@@ -22,3 +23,7 @@ int main(void)
 	return (0);
 }
 
+int _putchar(char c)
+{
+    return write(1, &c, 1);
+}
