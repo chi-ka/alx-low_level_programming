@@ -2,11 +2,13 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
+#include "lists.h"
 
 /*
- * print_list - prints a linked list.
+ * print_list - Prints a linked list.
+ *
  * @h: Your Name
- * Description: A simple linked lists and printing elements.
+ *
  * Return: count
  */
 
@@ -18,7 +20,7 @@ size_t print_list(const list_t *h)
 	{
 		if (h->str != NULL)
 		{
-			printf("[%i] %s\n", h->str, h->len);
+			printf("[%i] %s\n", h->len, h->str);
 		}
 		else
 		{
