@@ -4,13 +4,14 @@
 #include <string.h>
 #include "lists.h"
 
-/*
- * print_list - Prints a linked list.
+/**
+ * print_list - Prints all the elements of a linked list.
  *
- * @h: Your Name
+ * @h: A pointer to the head of the linked list.
  *
- * Return: count
+ * Return: The number of nodes in the list.
  */
+
 
 size_t print_list(const list_t *h)
 {
