@@ -1,27 +1,16 @@
-section .data
-    hello db "Hello, Holberton", 0
-    newline db 10
+; ----------------------------------------------------------------------------------------
+; Writes "Hola, mundo" to the console using a C library. Runs on Linux.
+;
+;     nasm -felf64 hola.asm && gcc hola.o && ./a.out
+; ----------------------------------------------------------------------------------------
 
-section .text
-    global main
-    extern putchar
+          global    main
+          extern    puts
 
-main:
-    push rbp
-    
-    mov rsi, hello  ; Load the address of the hello string
-.loop:
-    mov al, byte [rsi]  ; Load the current byte of the string into AL
-    cmp al, 0           ; Check if it's the null terminator
-    je .print_newline    ; If null terminator, jump to print_newline
-    call putchar        ; Call putchar to print the character
-    inc rsi              ; Move to the next character
-    jmp .loop            ; Repeat the loop
-    
-.print_newline:
-    mov al, byte [newline]  ; Load the newline character
-    call putchar          ; Call putchar to print the newline
-    
-    pop rbp
-    ret
-
+          section   .text
+main:                                       ; This is called by the C library startup code
+          mov       rdi, message            ; First integer (or pointer) argument in rdi
+          call      puts                    ; puts(message)
+          ret                               ; Return from main back into C library wrapper
+message:
+          db        "Hello, Holberton", 0        ; Note strings must be terminated with 0 in C
