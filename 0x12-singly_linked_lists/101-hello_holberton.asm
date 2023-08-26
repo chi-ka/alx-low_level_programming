@@ -1,16 +1,17 @@
-; ----------------------------------------------------------------------------------------
-; Writes "Hola, mundo" to the console using a C library. Runs on Linux.
-;
-;     nasm -felf64 hola.asm && gcc hola.o && ./a.out
-; ----------------------------------------------------------------------------------------
+section .data
+    msg db "Hello Holberton", 0
+    fmt db "%s", 10, 0
 
-          global    main
-          extern    puts
+section .text
+    global main
+    extern printf
+main:
+    push rbp
+    mov rdi, fmt
+    mov rsi, msg
+    mov rax, 0
+    call printf
+    pop rbp
+    xor rax, rax  ; Set rax to 0 to indicate successful execution
+    ret
 
-          section   .text
-main:                                       ; This is called by the C library startup code
-          mov       rdi, message            ; First integer (or pointer) argument in rdi
-          call      puts                    ; puts(message)
-          ret                               ; Return from main back into C library wrapper
-message:
-          db        "Hello, Holberton", 0        ; Note strings must be terminated with 0 in C
