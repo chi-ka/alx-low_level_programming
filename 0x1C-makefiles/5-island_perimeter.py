@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+'''
+Gets the perimiter of an island
+'''
 def island_perimeter(grid):
     '''
     Gets the perimiter of an island
