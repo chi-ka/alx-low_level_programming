@@ -1,12 +1,12 @@
-# Makefile for building the 'school' executable
+# Makefile for 'school' executable
 
 # Compiler
 CC := gcc
 
 # Source files
-SRC := main.c school.c
+SRC := main.c utils.c another_file.c
 
-# Object files (automatic generation using pattern rule)
+# Object files
 OBJ := $(SRC:.c=.o)
 
 # Executable name
@@ -18,28 +18,31 @@ RM := rm -f
 # Compiler flags
 CFLAGS := -Wall -Werror -Wextra -pedantic
 
-# Rule: all
-all: $(NAME)
+# Rule to build the executable
+all: $(OBJ)
+	$(CC) $^ -o $(NAME) $(CFLAGS)
 
-# Rule to build the 'school' executable
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+# Rule to build the object files
+%.o: %.c
+	$(CC) -c $< -o $@ $(CFLAGS)
 
-# Rule to compile .c files to .o files
-%.o: %.c m.h
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-# Rule: clean
-clean:
-	@$(RM) *~ $(NAME)
-
-# Rule: oclean (object files)
-oclean:
-	@$(RM) $(OBJ)
-
-# Rule: fclean
-fclean: clean oclean
-	@$(RM) $(NAME)
-
-# Rule: re
+# Rule to force recompilation of all source files
 re: fclean all
+
+# Rule to delete Emacs and Vim temporary files along with the executable and object files
+clean:
+	$(RM) *~ $(NAME) $(OBJ)
+
+# Rule to delete object files
+oclean:
+	$(RM) $(OBJ)
+
+# Rule to delete Emacs and Vim temporary files, the executable, and object files
+fclean: clean
+
+# Ensure that the header file m.h is present
+$(OBJ): m.h
+
+# PHONY targets to ensure the rules are always executed
+.PHONY: all clean oclean fclean re
+
