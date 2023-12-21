@@ -14,7 +14,7 @@ all: $(NAME)
 
 # Rule to build the 'school' executable
 $(NAME): $(SRC)
-	$(CC) -o $@ $^
+	$(CC) $^ -o $@
 
 # Clean rule to remove the executable
 clean:
