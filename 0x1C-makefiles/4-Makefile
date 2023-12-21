@@ -1,22 +1,15 @@
-# Makefile for building the 'school' executable
+# Makefile for 'school' executable
+CC=gcc
 
-# Compiler
-CC := gcc
+NAME=school
 
-# Compiler flags
-CFLAGS := -Wall -Werror -Wextra -pedantic
+CFLAGS=-Wall -Werror -Wextra -pedantic
 
-# Source files
-SRC := main.c school.c
+SRC=main.c school.c
 
-# Object files (automatic generation using pattern rule)
-OBJ := $(SRC:.c=.o)
+OBJ=$(SRC:.c=.o)
 
-# Executable name
-NAME := school
-
-# Program to delete files
-RM := rm -f
+RM=rm -f
 
 # Rule: all
 all: $(NAME)
@@ -24,7 +17,7 @@ all: $(NAME)
 # Rule to build the 'school' executable
 $(NAME): $(OBJ)
 	$(CC) -o $@ $^
-	
+
 # Rule to compile .c files to .o files
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -41,4 +34,4 @@ oclean:
 fclean: clean oclean
 
 # Rule: re
-re: fclean all
+re: oclean all
